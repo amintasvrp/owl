@@ -101,9 +101,9 @@ module.exports = {
     connection: {
       host: Env.get('DB_HOST', 'localhost'),
       port: Env.get('DB_PORT', 27017),
+      database: Env.get('DB_DATABASE', 'owl'),
       //username: Env.get('DB_USER', 'admin'),
       //password: Env.get('DB_PASSWORD', ''),
-      database: Env.get('DB_DATABASE', 'owl'),
       options: {
       //useNewUrlParser: true,
         useUnifiedTopology: true

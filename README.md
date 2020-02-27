@@ -3,16 +3,17 @@ A REST API focused on providing chat communication services
 
 # RUN APP STANDALONE LOCAL
 
-`npm run adonis-start`
+`npm run dev`
 
-ou
+# PERMISSION TO USER (WHEN IT'S NEEDED)
 
-`adonis serve --dev`
+you can use `sudo docker` or
+
+` sudo chown -R 1000:1000 "/var/run/docker.sock"`
 
 # BUILD DOCKER IMAGE
 
 `docker build -t username/dockernode .`
-
 
 # RUN APP DOCKER CONTAINER
 
@@ -22,6 +23,14 @@ ou
 
 `docker ps`
 
-# RUN DOCKER IMAGE FOR DEV
+# RUN DOCKER IMAGE WITH DOCKER COMPOSE FOR DEV (RECOMMENDED)
 
 `docker-compose up`
+
+# REMOVE DOCKER CONTAINER
+
+`docker rm <container-id>`
+
+# CLEAN ALL DOCKER DATA
+
+`docker system prune --all --force --volumes`
