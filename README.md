@@ -1,36 +1,45 @@
-# owl
-A REST API focused on providing chat communication services
+# Owl
 
-# RUN APP STANDALONE LOCAL
+A REST API focused on providing chat communication services.
 
-`npm run dev`
+## Getting Started
+1. Clone the repository and install depencencies:
+```bash
+npm install
+```
+2. Run the application on a local port:
 
-# PERMISSION TO USER (WHEN IT'S NEEDED)
+```bash
+npm run dev
+```
+3. (Optional) Run the application in a docker container:
 
-you can use `sudo docker` or
+```bash
+docker-compose up
+```
 
-` sudo chown -R 1000:1000 "/var/run/docker.sock"`
+### Prerequisites
+Have Node.js installed, also docker, docker-compose and MongoDB.
 
-# BUILD DOCKER IMAGE
+## Running the tests
+Use clients (front-end) for testing, such as [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/).
 
-`docker build -t username/dockernode .`
+## Deployment
+This project is ready to deploy.
 
-# RUN APP DOCKER CONTAINER
+## Built With
+* [Node.js](https://nodejs.org/en/) - Web framework used
+* [Adonis.js](https://adonisjs.com/) - Web framework for Node.js
 
-`docker run -p 3000:port -d username/dockernode`
+## Contributing
+Make a pull request and make clear what changes have been made and which bugs persist. Do not introduce bugs, be proactive!
 
-# CHECK DOCKER IMAGE RUNNING
+## Contributors
+* **Amintas Victor** - *Initial work* - [GitHub](https://github.com/amintasvrp)
 
-`docker ps`
+ If you contributed with this project, your name will be placed here. Welcome to the hall of fame :)
 
-# RUN DOCKER IMAGE WITH DOCKER COMPOSE FOR DEV (RECOMMENDED)
-
-`docker-compose up`
-
-# REMOVE DOCKER CONTAINER
-
-`docker rm <container-id>`
-
-# CLEAN ALL DOCKER DATA
-
-`docker system prune --all --force --volumes`
+## Acknowledgments
+* JavaScript and ECMAScript 6+
+* Knowledge about Node.js and MongoDB
+* Willingness to learn, research and develop (no laziness!)
