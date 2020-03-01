@@ -1,19 +1,18 @@
-'use strict'
+"use strict";
 
-const BaseModel = use('MongooseModel')
-const mongoose = use('Adonis/Addons/Mongoose')
+const BaseModel = use("MongooseModel");
+const mongoose = use("Adonis/Addons/Mongoose");
 const { Schema } = mongoose;
 
-
 class User extends BaseModel {
-  static boot ({ schema }) {
+  static boot({ schema }) {
     super.boot(schema);
 
     /**
      * A hook to hash the user password before saving
      * it to the database.
      */
-    this.addHook('preSave', 'UserHook.hashPassword');
+    this.addHook("preSave", "UserHook.hashPassword");
   }
 
   /**
@@ -26,11 +25,11 @@ class User extends BaseModel {
    *
    * @return {Object}
    */
-  tokens () {
-    return this.hasMany('App/Models/Token')
+  tokens() {
+    return this.hasMany("App/Models/Token");
   }
 
-  static get schema () {
+  static get schema() {
     return new Schema({
       username: String,
       email: String,
@@ -39,4 +38,4 @@ class User extends BaseModel {
   }
 }
 
-module.exports = User.buildModel('User');
+module.exports = User.buildModel("User");

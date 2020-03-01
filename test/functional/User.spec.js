@@ -1,61 +1,54 @@
-'use strict'
+"use strict";
 
-const { test, beforeEach, trait } = use('Test/Suite')('UserTest');
-const AuthController = use('App/Controllers/Managers/AuthController');
+const { test, beforeEach, trait } = use("Test/Suite")("UserTest");
+const AuthController = use("App/Controllers/Managers/AuthController");
 
-/** @type {import('@adonisjs/vow/src/ApiClient/Request*/
-trait('Test/ApiClient');
+trait("Test/ApiClient");
 
-const { timeout } = use ('Test/Runner');
+const { timeout } = use("Test/Runner");
 timeout(20 * 1000);
 
-const getBody = (response) => JSON.parse(response._res.res.text);
+const getBody = response => JSON.parse(response._res.res.text);
 
-test('Register an user', async ({ assert, client }) => {
-
+test("Register an user", async ({ assert, client }) => {
   const data = {
     username: "amintasvrp",
     email: "amintas@gmail.com",
-    password:"123456"
+    password: "123456"
   };
-  
+
   const response = await client
-                        .post('/register')
-                        .send(data)
-                        .end();
-  
+    .post("/register")
+    .send(data)
+    .end();
+
   const user = getBody(response);
 
   assert.equal(user.username, data.username, "User was not registered");
-
 }).timeout(0);
 
-
-test('Authenticate an user', async ({ assert, client }) => {
-
+test("Authenticate an user", async ({ assert, client }) => {
   const data = {
     email: "amintas@gmail.com",
-    password:"123456"
+    password: "123456"
   };
-  
+
   let response = await client
-                        .post('/authenticate')
-                        .send(data)
-                        .end();
+    .post("/authenticate")
+    .send(data)
+    .end();
 
-  const {type, token} = getBody(response);
-
+  const { type, token } = getBody(response);
 
   assert.equal(type, "bearer", "JWT not guaranteed");
   assert.notEqual(token, undefined, "Token invalid");
 
   response = await client
-                  .get('/app')
-                  .header('Authorization', 'Bearer ' + token)
-                  .end();
+    .get("/app")
+    .header("Authorization", "Bearer " + token)
+    .end();
 
-  const {message} = getBody(response);
+  const { message } = getBody(response);
 
   assert.equal(message, "Hello World", "Permission not guaranteed");
-
 });

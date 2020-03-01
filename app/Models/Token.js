@@ -1,13 +1,12 @@
-'use strict'
+"use strict";
 
-const TokenMongoose = use('AdonisMongoose/Src/Token')
+const TokenMongoose = use("AdonisMongoose/Src/Token");
 
 /**
  * Token's instance and static methods
  * @class
  */
 class Token extends TokenMongoose {
-  
   /**
    * You can modify the amount of days that the token will be valid
    */
@@ -18,9 +17,9 @@ class Token extends TokenMongoose {
   /**
    * You can modify the default schema
    */
-  static get schema () {
+  static get schema() {
     // Edit your schema here
-    return super.schema
+    return super.schema;
   }
 
   /**
@@ -31,4 +30,4 @@ class Token extends TokenMongoose {
   // }
 }
 
-module.exports = Token.buildModel('Token')
+module.exports = Token.buildModel("Token");

@@ -1,7 +1,7 @@
-'use strict'
+"use strict";
 
 /** @type {import('@adonisjs/framework/src/Env')} */
-const Env = use('Env')
+const Env = use("Env");
 
 module.exports = {
   /*
@@ -16,7 +16,7 @@ module.exports = {
   | Available Serializers - lucid, database
   |
   */
-  authenticator: 'jwt',
+  authenticator: "jwt",
 
   /*
   |--------------------------------------------------------------------------
@@ -28,11 +28,11 @@ module.exports = {
   |
   */
   session: {
-    serializer: 'mongoose',
-    model: 'App/Models/User',
-    scheme: 'session',
-    uid: 'email',
-    password: 'password'
+    serializer: "mongoose",
+    model: "App/Models/User",
+    scheme: "session",
+    uid: "email",
+    password: "password"
   },
 
   /*
@@ -49,11 +49,11 @@ module.exports = {
   |
   */
   basic: {
-    serializer: 'mongoose',
-    model: 'App/Models/User',
-    scheme: 'basic',
-    uid: 'email',
-    password: 'password'
+    serializer: "mongoose",
+    model: "App/Models/User",
+    scheme: "basic",
+    uid: "email",
+    password: "password"
   },
 
   /*
@@ -65,16 +65,16 @@ module.exports = {
   | via HTTP `Authorization` header.
   |
   */
- jwt: {
-    serializer: 'mongoose',
-    scheme: 'jwt',
-    model: 'App/Models/User',
-    token: 'App/Models/Token',
-    uid: 'email',
-    password: 'password',
-    expiry: '30m',
+  jwt: {
+    serializer: "mongoose",
+    scheme: "jwt",
+    model: "App/Models/User",
+    token: "App/Models/Token",
+    uid: "email",
+    password: "password",
+    expiry: "30m",
     options: {
-      secret: Env.get('APP_SECRET')
+      secret: Env.get("APP_SECRET")
     }
   },
 
@@ -87,12 +87,12 @@ module.exports = {
   |
   */
   api: {
-    serializer: 'mongoose',
-    scheme: 'api',
-    model: 'App/Models/User',
-    token: 'App/Models/Token',
-    uid: 'username',
-    password: '',
-    expiry: '30d',
+    serializer: "mongoose",
+    scheme: "api",
+    model: "App/Models/User",
+    token: "App/Models/Token",
+    uid: "username",
+    password: "",
+    expiry: "30d"
   }
-}
+};

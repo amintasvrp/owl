@@ -1,11 +1,11 @@
-'use strict'
+"use strict";
 
 //Importando modelos
-const User = use('App/Models/User');
+const User = use("App/Models/User");
 
 class UserPersistenceController {
   // Cadastrando usuário
-  static async register(data){
+  static async register(data) {
     const user = await new User(data).save();
     return user;
   }
@@ -15,4 +15,4 @@ class UserPersistenceController {
   }
 }
 
-module.exports = UserPersistenceController
+module.exports = UserPersistenceController;
