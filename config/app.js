@@ -16,7 +16,7 @@ module.exports = {
   |
   */
 
-  name: Env.get('APP_NAME', 'AdonisJs'),
+  name: Env.get('APP_NAME', 'Owl'),
 
   /*
   |--------------------------------------------------------------------------
@@ -161,7 +161,7 @@ module.exports = {
     | file, database
     |
     */
-    loader: 'file',
+    loader: 'database',
 
     /*
     |--------------------------------------------------------------------------

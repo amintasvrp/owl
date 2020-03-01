@@ -1,9 +1,34 @@
 'use strict'
 
-/** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
-const Model = use('Model')
+const TokenMongoose = use('AdonisMongoose/Src/Token')
 
-class Token extends Model {
+/**
+ * Token's instance and static methods
+ * @class
+ */
+class Token extends TokenMongoose {
+  
+  /**
+   * You can modify the amount of days that the token will be valid
+   */
+  // static expires () {
+  //   return 5
+  // }
+
+  /**
+   * You can modify the default schema
+   */
+  static get schema () {
+    // Edit your schema here
+    return super.schema
+  }
+
+  /**
+   * Customize populated properties for the user
+   */
+  // static getUserFields (type) {
+  //   return 'email password'
+  // }
 }
 
-module.exports = Token
+module.exports = Token.buildModel('Token')

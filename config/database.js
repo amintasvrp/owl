@@ -105,7 +105,7 @@ module.exports = {
       //username: Env.get('DB_USER', 'admin'),
       //password: Env.get('DB_PASSWORD', ''),
       options: {
-      //useNewUrlParser: true,
+        useNewUrlParser: true,
         useUnifiedTopology: true
       //replicaSet: Env.get('DB_REPLICA_SET', '')
       //ssl: Env.get('DB_SSL, '')
@@ -117,7 +117,7 @@ module.exports = {
       //authMechanism: Env.get('DB_AUTH_MECHANISM', ''),
       //other options
       },
-      debug: Env.get('DB_DEBUG', false)
+      debug: false
     }
   }
 }

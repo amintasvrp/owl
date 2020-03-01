@@ -1,6 +1,6 @@
 'use strict'
 
-class AppController {
+class AppHttpController {
 
   // Teste da verificação da autenticação
   index(){
@@ -9,4 +9,4 @@ class AppController {
 
 }
 
-module.exports = AppController
+module.exports = AppHttpController
