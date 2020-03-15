@@ -1,6 +1,6 @@
 # Owl
 
-Template for REST API using **Node.js** with the **Adonis** framework, **unit tests** and support for **docker** containerization and **Prettier** formatter. This application provides communication services by posts. **Educational use only**.
+Template for REST API using **Node.js** with the **Adonis** framework, **unit tests** and support for **Docker** containerization and **Prettier** formatter. This application provides communication services by posts. **Educational use only**.
 
 ## Getting Started
 1. Clone the repository and install depencencies:
