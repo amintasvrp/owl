@@ -1,13 +1,13 @@
 "use strict";
 
-const { test, beforeEach, trait } = use("Test/Suite")("UserTest");
+const { test, trait } = use("Test/Suite")("UserTest");
 const AuthController = use("App/Controllers/Managers/AuthController");
 
 trait("Test/ApiClient");
 
 const { timeout } = use("Test/Runner");
-timeout(20 * 1000);
 
+// Issue from AdonisJs
 const getBody = response => JSON.parse(response._res.res.text);
 
 test("Register an user", async ({ assert, client }) => {

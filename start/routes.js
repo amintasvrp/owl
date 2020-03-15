@@ -18,5 +18,8 @@ const Route = use("Route");
 
 Route.post("/register", "AuthHttpController.register");
 Route.post("/authenticate", "AuthHttpController.authenticate");
-
 Route.get("/app", "AppHttpController.index").middleware("auth");
+
+Route.group(() => {
+  Route.resource("tweets", "TweetHttpController").apiOnly();
+}).middleware("auth");
