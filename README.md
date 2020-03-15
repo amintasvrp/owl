@@ -1,6 +1,6 @@
 # Owl
 
-A REST API focused on providing chat communication services.
+Template for REST API using **Node.js** with the **Adonis** framework, **unit tests** and support for **docker** containerization. This application provides communication services by posts. **Educational use only**.
 
 ## Getting Started
 1. Clone the repository and install depencencies:
@@ -22,7 +22,11 @@ docker-compose up
 Have Node.js installed, also docker, docker-compose and MongoDB.
 
 ## Running the tests
-Use clients (front-end) for testing, such as [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/).
+Unit tests can be performed by running the following command:
+```bash
+npm run test
+```
+Also, can be used clients (front-end) for testing, such as [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/).
 
 ## Deployment
 This project is ready to deploy.
