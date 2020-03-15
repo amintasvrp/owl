@@ -28,8 +28,8 @@ Use clients (front-end) for testing, such as [Postman](https://www.getpostman.co
 This project is ready to deploy.
 
 ## Built With
-* [Node.js](https://nodejs.org/en/) - Web framework used
-* [Adonis.js](https://adonisjs.com/) - Web framework for Node.js
+* [Node.js](https://nodejs.org/en/) - Web framework used - v8.17.0
+* [Adonis.js](https://adonisjs.com/) - Web framework for Node.js - v4.1
 
 ## Contributing
 Make a pull request and make clear what changes have been made and which bugs persist. Do not introduce bugs, be proactive!
