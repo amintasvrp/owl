@@ -1,21 +1,25 @@
 # Owl
 
-Template for REST API using **Node.js** with the **Adonis** framework, **unit tests** and support for **docker** containerization. This application provides communication services by posts. **Educational use only**.
+Template for REST API using **Node.js** with the **Adonis** framework, **unit tests** and support for **docker** containerization and **Prettier** formatter. This application provides communication services by posts. **Educational use only**.
 
 ## Getting Started
 1. Clone the repository and install depencencies:
 ```bash
 npm install
 ```
-2. Run the application on a local port:
-
+2. Run the application
+- on a local port:
 ```bash
 npm run dev
 ```
-3. (Optional) Run the application in a docker container:
-
+- or in a docker container:
 ```bash
 docker-compose up
+```
+
+3. Before perform a Pull Request, run the Prettier extension to padronize the format:
+```bash
+npm run pretty
 ```
 
 ### Prerequisites
