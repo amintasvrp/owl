@@ -107,7 +107,8 @@ module.exports = {
       //password: Env.get('DB_PASSWORD', ''),
       options: {
         useNewUrlParser: true,
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
+        useFindAndModify: false
         //replicaSet: Env.get('DB_REPLICA_SET', '')
         //ssl: Env.get('DB_SSL, '')
         //connectTimeoutMS: Env.get('DB_CONNECT_TIMEOUT_MS', 15000),

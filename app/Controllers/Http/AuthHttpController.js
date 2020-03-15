@@ -1,6 +1,6 @@
 "use strict";
 
-//Importando modelos
+//Importando controller
 const AuthController = use("App/Controllers/Managers/AuthController");
 
 class AuthHttpController {
