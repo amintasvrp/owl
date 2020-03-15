@@ -33,7 +33,10 @@ npm run test
 Also, can be used clients (front-end) for testing, such as [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/).
 
 ## Deployment
-This project is ready to deploy.
+To deploy this project, use the following command:
+```bash
+npm run prod
+```
 
 ## Built With
 * [Node.js](https://nodejs.org/en/) - Web framework used - v8.17.0
